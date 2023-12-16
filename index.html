@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KOMENTY</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div id="commentDiv">
+    <! –– commentz in dis ––>
+</div>
+<script>
+    let currentDate = new Date().toLocaleDateString("de-DE");
+    let comments = [
+        {
+            name: "Joe Biden",
+            date: currentDate,
+            text: "Nuh uh"
+        },
+        {
+            name: "Miloš",
+            date: currentDate,
+            text: "Aligátor AAAAAAAAAAAAAAAAAAAAA"
+        }
+    ];
+    comments.forEach(comment => {
+        let commentDiv = document.createElement("div");
+        commentDiv.className = "comment";
+
+        let name = document.createElement("b");
+        name.textContent = comment.name;
+
+        let date = document.createElement("span");
+        date.textContent = comment.date;
+
+        let koment = document.createElement("p");
+        koment.textContent = comment.text;
+
+        commentDiv.appendChild(name);
+        commentDiv.appendChild(date);
+        commentDiv.appendChild(koment);
+        document.querySelector("#commentDiv").appendChild(commentDiv);
+    });
+</script>
+</body>
+</html>

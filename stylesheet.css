@@ -1,0 +1,11 @@
+b{
+    margin-right: 10px;
+}
+.comment{
+    border: 1px solid black;
+    margin-top: 10px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
